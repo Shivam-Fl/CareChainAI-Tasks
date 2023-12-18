@@ -32,15 +32,14 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
     // Update the parent component's state with the collected data
     setFormData(addressData);
 
-    // Move to the next step
+
     onAddAddress();
   };
 
   return (
     <form>
       <div className='m-12 -mt-5 flex flex-col gap-y-6 bg-transparent w-[800px] pr-28'>
-       
-        {/* Address Type */}
+  
         <div className='flex justify-between'>
           <label>Address Type:</label>
           <select className='focus:outline-none border-1 rounded-md border-blue-500 w-96'
@@ -54,7 +53,7 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           </select>
         </div>
 
-        {/* Street 1 */}
+  
         <div className='flex justify-between'>
           <label>Street 1:</label>
           <input
@@ -66,7 +65,7 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           />
         </div>
 
-        {/* Street 2 */}
+       
         <div className='flex justify-between'>
           <label>Street 2:</label>
           <input
@@ -78,7 +77,6 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           />
         </div>
 
-        {/* Landmark */}
         <div className='flex justify-between '>
           <label>Landmark:</label>
           <input
@@ -90,7 +88,7 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           />
         </div>
 
-        {/* Birth Country */}
+  
         <div className='flex justify-between pr-[12.5rem]'>
           <label>Birth Country:</label>
           <input
@@ -102,7 +100,6 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           />
         </div>
 
-        {/* District/State */}
         <div className='flex justify-between pr-[12.5rem]'>
           <label>District/State:</label>
           <input
@@ -114,7 +111,6 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           />
         </div>
 
-        {/* City */}
         <div className='flex justify-between pr-[10rem]'>
           <label>City:</label>
           <input
@@ -126,7 +122,6 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           />
         </div>
 
-        {/* Postal Code */}
         <div className='flex justify-between'>
           <label>Postal Code:</label>
           <input
@@ -138,7 +133,6 @@ const AddressForm = ({ onAddAddress, onPrev, formData, setFormData }) => {
           />
         </div>
 
-        {/* Buttons */}
         <div>
         <button onClick={handleAddAddress} class="absolute w-44 h-11 right-40 bottom-20 bg-sky-500 rounded shadow text-white text-lg font-bold font-['Inter']" style={{
   borderRadius: '0.3125rem',

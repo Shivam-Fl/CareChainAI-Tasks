@@ -9,13 +9,12 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
   const [initialBalance, setInitialBalance] = useState('');
 
   const handleAddInsurance = () => {
-    // Perform form validation
+ 
     if (!insuranceProvider || !insuranceName || !cardNumber || !insuranceNumber || !imisCode || !initialBalance) {
       alert('Please fill in all required insurance fields.');
       return;
     }
 
-    // Combine insurance data with previous form data
     const insuranceData = {
       insuranceProvider,
       insuranceName,
@@ -25,22 +24,17 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
       initialBalance,
     };
 
-    // Update the parent component's state with the collected data
     setFormData(insuranceData);
     onSubmit();
     
   };
 
-  const handleRegisterPatient = () => {
-    // Perform any final form validation before submitting
-    onSubmit();
-  };
+  
 
   return (
     <form>
       <div className='m-12 flex flex-col gap-y-6 bg-transparent w-[800px] pr-28 '>
-        
-        {/* Insurance Provider */}
+      
         <div className='flex justify-between'>
           <label>Insurance Provider:</label>
           <select
@@ -51,11 +45,10 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
             <option value="">Insurance Provider</option>
             <option value="Provider1">Provider 1</option>
             <option value="Provider2">Provider 2</option>
-            {/* Add more insurance providers as needed */}
+            
           </select>
         </div>
 
-        {/* Insurance Name */}
         <div className='flex justify-between'>
           <label>Insurance Name:</label>
           <input
@@ -67,7 +60,7 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
           />
         </div>
 
-        {/* Card Number */}
+      
         <div className='flex justify-between'>
           <label>Card Number (NSTC No.):</label>
           <input
@@ -79,7 +72,6 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
           />
         </div>
 
-        {/* Insurance Number */}
         <div className='flex justify-between'>
           <label>Insurance Number (NSSI No.):</label>
           <input
@@ -91,7 +83,6 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
           />
         </div>
 
-        {/* IMIS Code */}
         <div className='flex justify-between pr-32'>
           <label>IMIS Code:</label>
           <input
@@ -103,7 +94,6 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
           />
         </div>
 
-        {/* Initial Balance */}
         <div className='flex justify-between pr-32'>
           <label>Initial Balance:</label>
           <input
@@ -115,16 +105,13 @@ const InsuranceForm = ({ onPrev, onSubmit, formData, setFormData }) => {
           />
         </div>
 
-        {/* Buttons */}
         <div>
         <button onClick={handleAddInsurance} class="absolute w-44 h-11 right-40 bottom-20 bg-sky-500 rounded shadow text-white text-lg font-bold font-['Inter']" style={{
   borderRadius: '0.3125rem',
   background: '#0A86EB',
   boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
 }} >Add Address</button>
-          <button type="button" onClick={handleRegisterPatient}>
-            Register Patient
-          </button>
+         
         </div>
       </div>
     </form>

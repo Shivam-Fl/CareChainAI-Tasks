@@ -85,7 +85,7 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
         wardType,
       },
       additionalInfo: {
-        community,
+        Caste,
         maritalStatus,
         agreeNotification,
         employerInfo,
@@ -105,9 +105,9 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
   return (
     
     <form className='flex font-["Inter"] text-lg font-normal text-[#11375A] m-12 -mt-5 gap-x-8 ' onSubmit={handleSubmit}>
-      {/* First Column */}
+     
       <div className='basis-1/2 grid gap-y-3'>
-        {/* Salutation */}
+     
         <div className='flex gap-x-2 '>
           <label className='mr-28'>Salutation:</label>
           <input
@@ -137,7 +137,7 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           <label>Mrs.</label>
         </div>
 
-        {/* First Name */}
+       
         <div className=' flex gap-x-28'>
           <label>First Name:</label>
           <input
@@ -149,7 +149,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Middle Name */}
         <div className=' flex gap-x-[5.6rem]'>
           <label>Middle Name:</label>
           <input
@@ -161,7 +160,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Last Name */}
         <div className=' flex gap-x-28'>
           <label>Last Name:</label>
           <input
@@ -173,7 +171,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Date of Birth */}
         <div className='flex gap-x-8'>
           <label className='mr-[7.5rem]'>DOB:</label>
           <input
@@ -199,7 +196,7 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Age */}
+
         <div>
           <label className='mr-[10rem]'>Age:</label>
           <input
@@ -210,7 +207,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Phone Numbers */}
         <div className='flex'>
           <label className='mr-[4.6rem]'>Phone Numbers:</label>
           <div className=' flex flex-col mr-4'>
@@ -234,7 +230,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           
         </div>
 
-        {/* Landline Number */}
         <div>
           <label className='mr-16'>Landline Number:</label>
           <input
@@ -246,7 +241,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Country */}
         <div>
           <label className='mr-[8.5rem]'>Country:</label>
           <select className='focus:outline-none border-1 rounded-md border-blue-500  '
@@ -256,11 +250,10 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
             <option value="">Select Country</option>
             <option value="USA">USA</option>
             <option value="Canada">Canada</option>
-            {/* Add more countries as needed */}
+            
           </select>
         </div>
 
-        {/* Passport ID */}
         <div>
           <label className='mr-[6.75rem]'>Passport ID:</label>
           <input
@@ -273,9 +266,8 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
         </div>
       </div>
 
-      {/* Second Column */}
       <div className='basis-1/2 grid gap-y-2  '>
-        {/* Gender */}
+    
         <div className='flex gap-x-2'>
           <label className='mr-16'>Gender:</label>
           <input
@@ -302,7 +294,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           <label>Other</label>
         </div>
 
-        {/* Hospital Name */}
         <div>
           <label> Community: </label>
           <input
@@ -312,11 +303,10 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
             value={hospitalName}
             onChange={(e) => setHospitalName(e.target.value)}
           />
-          {/* Membership */}
+
           <span >Membership:</span>
         </div>
 
-        {/* Ward Type */}
         <div>
           
           <input
@@ -328,19 +318,17 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Community */}
         <div>
         <label>Caste/Ethnic group:</label>
           <input
           className='focus:outline-none border-1 rounded-md border-blue-500 ml-14 '
             type="text"
             
-            value={community}
+            value={Caste}
             onChange={(e) => setCommunity(e.target.value)}
           />
         </div>
 
-        {/* Marital Status */}
         <div className='flex gap-x-2'>
           <label className='mr-4'>Marital Status:</label>
           <input
@@ -366,7 +354,7 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           <label>Divorced</label>
         </div>
 
-        {/* Agree for Notification */}
+        
         <div>
           <label className='mr-[2.35rem]'>
             Notification: 
@@ -381,7 +369,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           
         </div>
 
-        {/* Employer Information */}
         <div>
           <label>Employer Information:</label>
           <input
@@ -393,7 +380,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Previous Last Name */}
         <div>
           <label>Previous Last Name:</label>
           <input
@@ -405,7 +391,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Occupation */}
         <div>
           <label>Occupation:</label>
           <input
@@ -417,7 +402,6 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
           />
         </div>
 
-        {/* Email */}
         <div>
           <label>Email:</label>
           <input
@@ -428,7 +412,7 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-          {/* Submit Button */}
+     
       <div>
      
   <button type='submit' class="absolute w-44 h-11 right-40 bottom-16 bg-sky-500 rounded shadow text-white text-lg font-bold font-['Inter']" style={{

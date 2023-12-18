@@ -35,7 +35,7 @@ const MultiStepForm = () => {
  
 
   const handleSubmit = () => {
-    // Validate all required data for the current step
+    
     const requiredFields = {
       1: ['salutation', 'firstName', 'lastName', 'day', 'month', 'year', 'age', 'gender', 'email'],
       2: ['addressType', 'street1', 'birthCountry', 'city', 'postalCode'],
@@ -53,12 +53,10 @@ const MultiStepForm = () => {
       return;
     }
   
-    // Additional validation logic can be added based on specific requirements
-  
-    // Perform any final form validation before submitting
+   
     console.log('Final Form Data:', formData);
     handleNext();
-    // Here, you can send formData to your backend or perform any other required actions
+   
   };
 
   return (
