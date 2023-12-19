@@ -16,7 +16,7 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
   const [gender, setGender] = useState('');
   const [hospitalName, setHospitalName] = useState('');
   const [wardType, setWardType] = useState('');
-  const [community, setCommunity] = useState('');
+  const [Caste, setCaste] = useState('');
   const [maritalStatus, setMaritalStatus] = useState('');
   const [agreeNotification, setAgreeNotification] = useState(false);
   const [employerInfo, setEmployerInfo] = useState('');
