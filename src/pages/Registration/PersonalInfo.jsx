@@ -325,7 +325,7 @@ const PersonalInfoForm = ({ onNext, formData, setFormData }) => {
             type="text"
             
             value={Caste}
-            onChange={(e) => setCommunity(e.target.value)}
+            onChange={(e) => setCaste(e.target.value)}
           />
         </div>
 
