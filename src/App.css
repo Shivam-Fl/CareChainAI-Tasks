@@ -83,3 +83,78 @@ color: whitesmoke;
   font-weight: 700;
 }
 
+/* Search Patient css */
+
+/* Search bar styles */
+.search-input {
+  border-radius: 0.625rem;
+  background: #FFF;
+  box-shadow: 5px 4px 5px -2px rgba(0, 0, 0, 0.25) inset;
+  padding: 0.5rem;
+}
+
+/* Table styles */
+.search-patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Table header styles */
+.table-header {
+  border-bottom: 1px solid #000; /* Adjust the color as needed */
+  padding: 1rem;
+}
+
+
+/* search patient */
+/* Add these styles in your Tailwind CSS or as inline styles */
+
+/* Patient Details Section */
+.patient-details {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Patient Info Container */
+.patient-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Patient Info Box */
+.patient-info-box {
+  
+  width: 60%; /* Adjust the width as needed */
+}
+
+
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  /* Add other styles for search bar */
+}
+
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  color: #11375A;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Each Option */
+.options div {
+  cursor: pointer;
+}
+
+/* Specific Content Styles (Table Headers, etc.) will be added based on the selected option */
+
