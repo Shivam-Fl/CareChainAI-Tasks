@@ -6,6 +6,7 @@ import PatientDetails from './SearchPatient/PatientDetails';
 
 const SearchPatientPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedPatient, setSelectedPatient] = useState(null);
   var patients = [
     {
       hospitalNumber: 1234,
@@ -16,8 +17,23 @@ const SearchPatientPage = () => {
       phoneNumber: 7822875508,
     },
   ];
-
+  
   const [resultsCount, setResultsCount] = useState(patients.length);
+  
+
+
+
+  const handleBackClick = () => {
+    // Logic to go back to the search table or previous page
+    setSelectedPatient(null); // Reset the selected patient
+  };
+
+  const handleCancelSearch = () => {
+    // Logic to cancel the search and reset the state
+    setSearchQuery('');
+    setPatients([]); // Reset the patient data
+    setResultsCount(0);
+  };
 
   const handleSearch = (query) => {
     // Perform search logic based on the query
@@ -41,7 +57,7 @@ const SearchPatientPage = () => {
     console.log(`Uploading ${documentType} for patient ${patientId}`);
   };
 
-  const [selectedPatient, setSelectedPatient] = useState(null);
+
 
   const handleRowClick = (patient) => {
     setSelectedPatient(patient);
@@ -53,7 +69,12 @@ const SearchPatientPage = () => {
       <div className="search-patient-page ">
         <Patientheader count={2} />
         {selectedPatient ? (
-          <PatientDetails patientData={selectedPatient} onBackClick={() => setSelectedPatient(null)} />
+          <PatientDetails
+          patientData={selectedPatient}
+          onBackClick={handleBackClick}
+          onSearch={handleSearch}
+          onCancelSearch={handleCancelSearch}
+        />
         ) : (
           <div>
           
